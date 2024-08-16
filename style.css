@@ -1,0 +1,99 @@
+:root {
+  --font-family: "Open Sans", sans-serif;
+  font-family: "Open Sans", sans-serif;
+}
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+header {
+  background-color: #29A28C1C;
+  ;
+  display: flex;
+  justify-content: space-between;
+  position: absolute;
+  width: 100%;
+  padding: 15px 70px;
+  align-items: center;
+}
+nav {
+  width: 889px;
+  height: 24px;
+  /* display: inline-block;
+justify-content: space-between; */
+}
+li {
+  text-align: center;
+  cursor: pointer;
+  font-family: var(--font-family);
+  font-weight: 400;
+  font-size: 18px;
+  color: #fff;
+}
+ul {
+  list-style-type: none;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.logo {
+  font-family: var(--font-family);
+  font-weight: 700;
+  font-size: 18px;
+  color: #fff;
+  display: flex;
+  align-items: center;
+}
+.logo figure {
+    width: 51px;
+    height: 51px;
+  border-radius: 50%;   
+  background-color: #fff;
+  background-image: url(https://ucarecdn.com/b4157a46-7c83-475d-afd0-e2d490c29bbd/);
+  background-size: 118%;
+  background-position: -3px center ;
+  margin: 0 5px;
+}
+.block1 div.figure {
+  width: 100vw;
+  height: 50vw;
+  background-image: url(https://ucarecdn.com/761233c4-7224-418d-b151-ea7bc1196250/);
+  background-size: cover;
+  position: absolute;
+  z-index: -2;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  align-content: center;
+}
+.block1 div.figure::after{
+    content: "";
+    display: block;
+    width: 100vw;
+    height: 50vw;
+    background-color: #0D0C21A6;
+    position: absolute;
+    z-index: -1;
+}
+.block1 .figure .text h1{
+font-family: "Open Sans", sans-serif;
+font-size: 47px;
+font-weight: 400;
+text-align: center;
+color: #fff;
+text-transform: uppercase;
+-webkit-text-stroke-width: 1px;
+-webkit-text-stroke-color: black;
+}
+.block1 .figure .text .button{
+    text-align: center;
+    color: #fff;
+    padding: 12px 39px;
+    border: 1px solid white;
+    border-radius: 50vh;
+    width: fit-content;
+    margin: auto;
+    margin-top: 5%;
+}
