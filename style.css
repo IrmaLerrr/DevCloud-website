@@ -1,15 +1,20 @@
 :root {
-  --font-family: "Open Sans", sans-serif;
-  font-family: "Open Sans", sans-serif;
+  --font-family: Open Sans, sans-serif;
+  font-family: Open Sans, sans-serif;
 }
 * {
   padding: 0;
   margin: 0;
   box-sizing: border-box;
 }
+h1 {
+  font-size: 40px;
+  font-weight: bold;
+  text-align: center;
+  margin: 10vw;
+}
 header {
-  background-color: #29A28C1C;
-  ;
+  background-color: #29a28c1c;
   display: flex;
   justify-content: space-between;
   position: absolute;
@@ -46,13 +51,13 @@ ul {
   align-items: center;
 }
 .logo figure {
-    width: 51px;
-    height: 51px;
-  border-radius: 50%;   
+  width: 51px;
+  height: 51px;
+  border-radius: 50%;
   background-color: #fff;
   background-image: url(https://ucarecdn.com/b4157a46-7c83-475d-afd0-e2d490c29bbd/);
   background-size: 118%;
-  background-position: -3px center ;
+  background-position: -3px center;
   margin: 0 5px;
 }
 .block1 div.figure {
@@ -60,7 +65,7 @@ ul {
   height: 50vw;
   background-image: url(https://ucarecdn.com/761233c4-7224-418d-b151-ea7bc1196250/);
   background-size: cover;
-  position: absolute;
+  position: relative;
   z-index: -2;
   display: flex;
   flex-direction: column;
@@ -68,32 +73,655 @@ ul {
   align-items: center;
   align-content: center;
 }
-.block1 div.figure::after{
-    content: "";
-    display: block;
-    width: 100vw;
-    height: 50vw;
-    background-color: #0D0C21A6;
-    position: absolute;
-    z-index: -1;
+.block1 div.figure::after {
+  content: "";
+  display: block;
+  width: 100vw;
+  height: 50vw;
+  background-color: #0d0c21a6;
+  position: absolute;
+  z-index: -1;
 }
-.block1 .figure .text h1{
-font-family: "Open Sans", sans-serif;
-font-size: 47px;
-font-weight: 400;
-text-align: center;
-color: #fff;
-text-transform: uppercase;
--webkit-text-stroke-width: 1px;
--webkit-text-stroke-color: black;
+.block1 .figure .text h1 {
+  font-family: "Open Sans", sans-serif;
+  font-size: 47px;
+  font-weight: 400;
+  text-align: center;
+  color: #fff;
+  text-transform: uppercase;
+  -webkit-text-stroke-width: 1px;
+  -webkit-text-stroke-color: black;
 }
-.block1 .figure .text .button{
-    text-align: center;
-    color: #fff;
-    padding: 12px 39px;
-    border: 1px solid white;
-    border-radius: 50vh;
-    width: fit-content;
-    margin: auto;
-    margin-top: 5%;
+.block1 .figure .text .button {
+  text-align: center;
+  color: #fff;
+  padding: 12px 39px;
+  border: 1px solid white;
+  border-radius: 50vh;
+  width: fit-content;
+  margin: auto;
+  margin-top: 5%;
 }
+.block2 {
+  display: flex;
+  color: #000;
+  top: 50vw;
+  margin: 5vw;
+  text-align: center;
+  justify-content: center;
+}
+.block2 h2 {
+  font-size: 48px;
+  font-weight: 600;
+}
+.block2 p {
+  font-size: 16px;
+  font-weight: 400;
+}
+.block2 div {
+  padding: 1vw 5vw;
+}
+.rb {
+  border-right: 3px solid #29a28c;
+}
+.block3 {
+  display: flex;
+  color: #000;
+  top: 50vw;
+  margin: 5vw;
+  text-align: center;
+  justify-content: center;
+}
+.block3 .item1 {
+  padding: 0;
+  margin: 0;
+  width: 45vw;
+  height: 35vw;
+  background-image: url(https://ucarecdn.com/83398f66-832a-4a52-9930-0549e372be61/);
+  background-size: cover;
+}
+.block3 .item2 {
+  padding: 1vw;
+  margin: 0;
+  width: 45vw;
+  height: 35vw;
+  display: flex;
+  flex-wrap: wrap;
+  align-content: space-between;
+  justify-content: center;
+}
+.block3 blockquote {
+  font-size: 40px;
+  font-weight: bold;
+  margin: 2vw;
+  position: relative;
+}
+.block3 blockquote::after {
+  width: 60px;
+  height: 60px;
+  background: url("https://img.icons8.com/glyph-neue/64/d9d9d9/quote-right.png");
+  position: absolute;
+  content: "";
+  top: 0;
+  right: 0;
+}
+.block3 blockquote::before {
+  width: 60px;
+  height: 60px;
+  background: url("https://img.icons8.com/glyph-neue/64/D9D9D9/quote-left.png");
+  position: absolute;
+  content: "";
+  bottom: 0;
+  left: 0;
+}
+.block3 .text {
+  font-size: 23px;
+  padding: 0 3vw;
+  line-height: 130%;
+  font-stretch: 200%;
+  margin-top: 4vw;
+}
+/* .block3 .button{
+  font-size: 16px;
+  font-weight: lighter;
+  color: #fff;
+  background-color: #000;
+  padding: 1vw;
+  height: 3vw;
+  border-radius: 1.5vw;
+  width: fit-content;
+  margin: 0 auto 3vw auto;
+} */
+.block3 .bottom-text {
+  font-size: 13px;
+  font-weight: lighter;
+  margin: 1vw;
+  margin-top: 4vw;
+}
+.cards {
+  display: flex;
+  justify-content: center;
+  gap: 5vw;
+  margin: 5vw;
+}
+.card {
+  /* background-color: #000; */
+  box-shadow: 0 0 1vw #888;
+  height: 30vw;
+  width: 25%;
+  border-radius: 3vw;
+  position: relative;
+  padding: 2vw;
+}
+.card::after {
+  content: "";
+  top: 0;
+  right: 0;
+  position: absolute;
+  z-index: 2;
+  border-top-right-radius: 3vw;
+  border: 5vw solid #017b65;
+  border-bottom: 5vw solid transparent;
+  border-left: 5vw solid transparent;
+}
+.card::before {
+  content: "";
+  top: 15px;
+  right: 15px;
+  background-color: transparent;
+  position: absolute;
+  z-index: 3;
+  width: 60px;
+  height: 60px;
+}
+.card1::before {
+  background-image: url(https://img.icons8.com/wired/60/ffffff/smartphone-tablet.png);
+}
+.card2::before {
+  background-image: url(https://img.icons8.com/pastel-glyph/60/ffffff/laptop-and-phone.png);
+}
+.card3::before {
+  background-image: url(https://img.icons8.com/ios/60/ffffff/internet--v1.png);
+}
+/* <img width="50" height="50" src="https://img.icons8.com/ios/50/multiple-devices.png" alt="multiple-devices"/>
+<img width="64" height="64" src="https://img.icons8.com/wired/64/multiple-devices.png" alt="multiple-devices"/>
+<img width="50" height="50" src="https://img.icons8.com/ios/50/internet--v1.png" alt="internet--v1"/> 
+<img width="50" height="50" src="https://img.icons8.com/ios/50/cloud--v1.png" alt="cloud--v1"/>
+<img width="50" height="50" src="https://img.icons8.com/ios/50/long-arrow-right--v1.png" alt="long-arrow-right--v1"/>
+<img width="64" height="64" src="https://img.icons8.com/pastel-glyph/64/laptop-and-phone.png" alt="laptop-and-phone"/>
+<img width="64" height="64" src="https://img.icons8.com/wired/64/smartphone-tablet.png" alt="smartphone-tablet"/>*/
+.card {
+  display: flex;
+  flex-wrap: wrap;
+  align-content: space-between;
+}
+
+.card h3 {
+  font-size: 20px;
+  text-transform: uppercase;
+  font-weight: normal;
+  line-height: 140%;
+  font-stretch: 200%;
+  padding: 1vw 3vw 1vw 1vw;
+}
+.card p {
+  font-size: 13px;
+  font-weight: normal;
+  line-height: 150%;
+  padding: 1vw;
+}
+.button {
+  display: flex;
+  justify-content: space-between;
+  padding: 1vw;
+  width: 100%;
+}
+.button .icon {
+  width: 50px;
+  height: 50px;
+  background-image: url(https://img.icons8.com/ios/50/000000/cloud--v1.png);
+}
+.button .text {
+  color: #000;
+  font-size: 16px;
+  font-weight: normal;
+  line-height: 50px;
+}
+.button .arrow {
+  width: 50px;
+  height: 50px;
+  background-image: url(https://img.icons8.com/ios/50/000000/long-arrow-right--v1.png);
+}
+.card.card1 .button .icon {
+  width: 50px;
+  height: 50px;
+  background-image: url(https://img.icons8.com/ios/50/29A28C/cloud--v1.png);
+}
+.card.card1 .button .text {
+  color: #29a28c;
+  font-size: 16px;
+  font-weight: normal;
+  line-height: 50px;
+}
+.card.card1 .button .arrow {
+  width: 50px;
+  height: 50px;
+  background-image: url(https://img.icons8.com/ios/50/29A28C/long-arrow-right--v1.png);
+}
+.block5 .slider {
+  display: flex;
+  margin: 5vw 10vw;
+  position: relative;
+}
+.block5 .slider .img {
+  padding: 0;
+  margin: 0;
+  width: 40vw;
+  height: 30vw;
+  background-image: url(https://ucarecdn.com/26b4a8e2-88ae-42b0-81f7-90bcf30ad7ef/);
+  background-size: cover;
+}
+.block5 .item2 {
+  padding: 1vw;
+  margin: 0;
+  width: 50vw;
+  height: 30vw;
+  display: flex;
+  flex-wrap: wrap;
+  align-content: space-between;
+  justify-content: center;
+}
+.block5 h3 {
+  font-size: 36px;
+  font-weight: normal;
+  text-transform: uppercase;
+}
+.block5 .text {
+  font-size: 18px;
+  font-weight: normal;
+  padding: 1vw 5vw 1vw 1vw;
+  line-height: 150%;
+}
+.block5 .button {
+  justify-content: left;
+}
+.block5 .slider .item2 .button .text {
+  font-size: 20px;
+  text-transform: uppercase;
+  line-height: 100%;
+  text-align: center;
+  padding: 1vw;
+}
+.block5 .slider::before {
+  content: "";
+  width: 24px;
+  height: 24px;
+  background-image: url(https://img.icons8.com/ios/24/back--v1.png);
+  position: absolute;
+  top: 50%;
+  left: -5%;
+}
+.block5 .slider::after {
+  content: "";
+  width: 24px;
+  height: 24px;
+  background-image: url(https://img.icons8.com/ios/24/forward--v1.png);
+  position: absolute;
+  top: 50%;
+  right: -5%;
+}
+/* <img width="50" height="50" src="https://img.icons8.com/ios/24/back--v1.png" alt="back--v1"/>
+<img width="50" height="50" src="https://img.icons8.com/ios/24/forward--v1.png" alt="forward--v1"/> */
+
+.button-black {
+  font-size: 16px;
+  font-weight: lighter;
+  color: #fff;
+  background-color: #000;
+  padding: 1vw;
+  height: 3vw;
+  border-radius: 1.5vw;
+  width: fit-content;
+  margin: 0 auto 3vw auto;
+}
+.block6 .selector {
+  display: flex;
+  justify-content: space-between;
+  margin: 5vw;
+  padding: 0;
+}
+.block6 .item1 {
+  width: 8vw;
+  height: 30vw;
+  display: flex;
+  flex-wrap: wrap;
+}
+.block6 .item1 div {
+  margin: 1vw;
+  border: 1px solid #000;
+  width: 6vw;
+  text-align: center;
+  font-size: 18px;
+  line-height: 2.8vw;
+}
+.block6 .item1 .rec1 {
+  color: #29a28c;
+  border: 1px solid #29a28c;
+}
+.block6 .item2 {
+  width: 45vw;
+  height: 30vw;
+  background-image: url(https://ucarecdn.com/5a556d3e-6c7c-4715-9128-e7f2ebe384cb/);
+  background-size: cover;
+}
+.block6 .item3 {
+  width: 35vw;
+  height: 30vw;
+  display: flex;
+  flex-wrap: wrap;
+  align-content: space-between;
+}
+.block6 .item3 h3 {
+  font-size: 36px;
+  font-weight: normal;
+  text-transform: uppercase;
+  padding: 1vw;
+}
+.block6 .text {
+  font-size: 18px;
+  font-weight: normal;
+  padding: 1vw;
+  line-height: 150%;
+}
+.block6 .selector .item3 .button .text {
+  font-size: 20px;
+  text-transform: uppercase;
+  line-height: 100%;
+  text-align: center;
+}
+.block6 .button {
+  justify-content: left;
+}
+.block7 .images {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 5vw;
+  margin: 10vw 5vw;
+  justify-content: space-between;
+}
+.block7 img {
+  width: 7vw;
+}
+.block8 {
+  display: flex;
+}
+.block8 .item1 {
+  width: 45vw;
+  height: 30vw;
+  background-color: #027b6610;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  text-align: center;
+  padding: 5vw;
+}
+.block8 .item1 div {
+  width: 100%;
+}
+.block8 .item1 .icon {
+  width: 7vw;
+  height: 7vw;
+  background-image: url(https://ucarecdn.com/b879c200-500c-4402-ac21-3de2cdca612c/);
+  background-size: cover;
+}
+.block8 .item1 .text1 {
+  font-size: 20px;
+  text-transform: uppercase;
+  line-height: 180%;
+  /* padding: 0.5vw; */
+}
+.block8 .item1 .text2 {
+  font-size: 18px;
+  line-height: 100%;
+  font-weight: 300;
+  /* padding: 0.5vw; */
+}
+.block8 .item1 .text3 {
+  font-size: 16px;
+  line-height: 100%;
+  font-weight: 300;
+  padding: 0.5vw;
+  margin-top: 1.5vw;
+  width: 80%;
+}
+.block8 .item1 .stars {
+  display: flex;
+  justify-content: center;
+  gap: 1vw;
+  margin-top: 2vw;
+}
+.block8 .item1 .stars .star {
+  width: 1.5vw;
+  height: 1.5vw;
+  background-image: url(https://img.icons8.com/fluency/48/star--v1.png);
+  background-size: cover;
+}
+/* <img width="48" height="48" src="https://img.icons8.com/fluency/48/star--v1.png" alt="star--v1"/> */
+.block8 .item2 {
+  width: 55vw;
+  height: 30vw;
+  background: linear-gradient(
+    217deg,
+    #25ba9f 0%,
+    #1b7f6d 50.47%,
+    #157161 73.06%,
+    #09463b 98.43%
+  );
+  color: #fff;
+  padding: 5vw 10vw;
+}
+.block8 .item2 h2 {
+  /* font-size: 36px; */
+  font-weight: normal;
+  text-align: center;
+  text-transform: uppercase;
+}
+.block8 .item2 .inputs {
+  background-color: transparent;
+  font-size: 18px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+.block8 .item2 .inputs div.name {
+  width: 100%;
+}
+.block8 .item2 .inputs input.name {
+  width: 100%;
+}
+.block8 .item2 .inputs .textarea {
+  width: 100%;
+}
+/* .block8 .item2 .inputs .email {
+  width: 50%;
+}
+.block8 .item2 .inputs .tel {
+  width: 50%;
+} */
+/* .block8 .item2 .inputs .textarea {
+  width: 100%;
+} */
+input {
+  background-color: transparent;
+  border: none;
+  outline: none;
+  margin: 1vw 0;
+  font-size: 18px;
+  color: #fff8;
+  padding: 0.5vw;
+  border-bottom: 1px solid #fff;
+}
+textarea {
+  background-color: transparent;
+  border: none;
+  outline: none;
+  font-size: 18px;
+  color: #fff8;
+  border: 1px solid #fff;
+  border-radius: 1vw;
+  width: 100%;
+  height: 10vw;
+  padding: 1vw;
+  margin: 1vw 0;
+}
+input::placeholder, textarea::placeholder{
+  color: #fff8;
+}
+.textarea{
+  position: relative;
+}
+.textarea::after {
+  content: "";
+  display: block;
+  width: 2vw;
+  height: 2vw;
+  background-image: url(https://img.icons8.com/ios/50/ffffff/attach.png);
+  /* opacity: 50%; */
+  background-size: cover;
+  border: 1px solid #fff;
+  border-radius: 20%;
+  position: absolute;
+  bottom: 2vw;
+  right: 1vw;
+}
+.textarea::before {
+  content: "";
+  display: block;
+  width: 2vw;
+  height: 2vw;
+  background-image: url(https://img.icons8.com/ios/50/ffffff/telegram-app.png);
+  /* opacity: 50%; */
+  background-size: cover;
+  border: 1px solid #fff;
+  border-radius: 20%;
+  position: absolute;
+  bottom: 2vw;
+  right: 3.5vw;
+}
+/* <img width="50" height="50" src="https://img.icons8.com/ios/50/attach.png" alt="attach"/>
+<img width="50" height="50" src="https://img.icons8.com/ios/50/telegram-app.png" alt="telegram-app"/> */
+footer .row1{
+  width: 90vw;
+  border-bottom: 3px solid #BDBDBD;
+  margin: auto;
+  margin-top: 10vw;
+  height: 25vw;
+  width: 90vw;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+footer .row2{
+  width: 85vw;
+  margin: 3vw auto 5vw auto;
+  text-align: right;
+  color: #BDBDBD;
+}
+/* footer .row1 .col1{
+  width: 30%;
+  height: 100%;
+  border: 1px solid #ff0000;
+}
+footer .row1 .col2{
+  width: 30%;
+  height: 100%;
+  border: 1px solid #ff0000;
+}
+footer .row1 .col3{
+  width: 40%;
+  height: 100%;
+  border: 1px solid #ff0000;
+} */
+footer .row1 .col1, .col2, .col3{
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  align-content: center;
+  justify-content: center;
+}
+footer .row1 .col1 .icon{
+  background-image: url(https://ucarecdn.com/b4157a46-7c83-475d-afd0-e2d490c29bbd/);
+  width: 5vw;
+  height: 5vw;
+  background-size: cover;
+  padding: 1vw;
+}
+footer .row1 .col1 .icon-text{
+  font-size: 20px;
+  font-weight: 700;
+  padding: 1vw;
+}
+footer .row1 .col1 .text{
+  font-size: 18px;
+  text-transform: uppercase;
+  font-weight: 300;
+  padding: 0 1vw 1vw 5vw;
+  
+}
+footer .row1 .col3 div{
+  padding: 1vw 1vw;
+  width: 45%;
+  font-size: 18px;
+  font-weight: 300;
+}
+/* footer .row1 .col2{
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  align-content: center;
+  justify-content: center;
+} */
+footer .row1 .col2 .tel .icon{
+  background-image: url(https://img.icons8.com/ios-filled/50/phone.png);
+  width: 2vw;
+  height: 2vw;
+  background-size: cover;
+}
+footer .row1 .col2 .tel, .mail1, .mail2 {
+  display: flex;
+  align-items: center;
+  align-content: center;
+  justify-content: space-between;
+  width: 18vw;
+  font-size: 18px;
+  font-weight: 300;
+  text-transform: uppercase;
+  padding: 0.5vw;
+  gap: 0.5vw;
+}
+footer .row1 .col2 .mail1 .icon1{
+  background-image: url(https://img.icons8.com/ios/50/mail.png);
+  width: 2vw;
+  height: 2vw;
+  background-size: cover;
+}
+footer .row1 .col2 .mail2 .icon2{
+  background-image: url(https://img.icons8.com/ios-filled/50/whatsapp--v1.png);
+  width: 2vw;
+  height: 2vw;
+  background-size: cover;
+}
+footer .row1 .col2 .mail2 .icon3{
+  background-image: url(https://img.icons8.com/ios-filled/50/telegram-app.png);
+  width: 2vw;
+  height: 2vw;
+  background-size: cover;
+}
+footer .row1 .col2 .text2{
+  font-size: 13px;
+  text-transform: uppercase;
+}
+/* <img width="50" height="50" src="https://img.icons8.com/ios-filled/50/phone.png" alt="phone"/>
+<img width="50" height="50" src="https://img.icons8.com/ios/50/mail.png" alt="mail"/>
+<img width="50" height="50" src="https://img.icons8.com/ios-filled/50/whatsapp--v1.png" alt="whatsapp--v1"/>
+<img width="50" height="50" src="https://img.icons8.com/ios-filled/50/telegram-app.png" alt="telegram-app"/> */
