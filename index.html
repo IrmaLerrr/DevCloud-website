@@ -10,7 +10,7 @@
     <link href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap" rel="stylesheet">
   </head>
   <body>
-    <header>
+    <header id="header">
       <div class="logo">
         <figure>
           <!-- <img src="https://ucarecdn.com/b4157a46-7c83-475d-afd0-e2d490c29bbd/" alt=""> -->
@@ -19,12 +19,16 @@
       </div>
       <nav>
         <ul>
-          <li>Главная</li>
-          <li>Услуги</li>
-          <li>Как мы работаем</li>
-          <li>Портфолио</li>
-          <li>О нас</li>
-          <li>Контакты</li>
+          <li><a href="#main">Главная</a></li>
+          <li><a href="#services">
+            Услуги <svg width="12" height="8" viewBox="0 0 12 8" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path d="M0 0.555603L6 6.5556L12 0.555603" stroke="white" />
+            </svg>
+          </a></li>
+          <li><a href="#process">Как мы работаем</a></li>
+          <li><a href="#project">Портфолио</a></li>
+          <li><a href="#about">О нас</a></li>
+          <li><a href="#contacts">Контакты</a></li>
         </ul>
       </nav>
     </header>
@@ -36,11 +40,33 @@
               Компания по разработке<br />
               программного обеспечения
             </h1>
-            <div class="button">Запросить консльтацию</div>
+            <div class="button"><a href="#">Запросить консультацию</a></div>
+            <a href="#main">
+              <div class="arrow"><svg width="50" height="80" viewBox="0 0 50 80" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <g clip-path="url(#clip0_1_127)" filter="url(#filter0_d_1_127)">
+                  <path d="M25 -18V71M25 71L5 44.6296M25 71L45 44.6296" stroke="white" stroke-width="2" />
+                </g>
+                <defs>
+                  <filter id="filter0_d_1_127" x="-4" y="0" width="57.4288" height="79.1555" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
+                    <feFlood flood-opacity="0" result="BackgroundImageFix" />
+                    <feColorMatrix in="SourceAlpha" type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0" result="hardAlpha" />
+                    <feOffset dy="4" />
+                    <feGaussianBlur stdDeviation="2" />
+                    <feComposite in2="hardAlpha" operator="out" />
+                    <feColorMatrix type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0.25 0" />
+                    <feBlend mode="normal" in2="BackgroundImageFix" result="effect1_dropShadow_1_127" />
+                    <feBlend mode="normal" in="SourceGraphic" in2="effect1_dropShadow_1_127" result="shape" />
+                  </filter>
+                  <clipPath id="clip0_1_127">
+                    <rect width="49.4287" height="71.1555" fill="white" />
+                  </clipPath>
+                </defs>
+              </svg></div>
+            </a>
           </div>
         </div>
       </section>
-      <section class="block2">
+      <section class="block2" id="main">
         <div class="rb">
           <h2>98%</h2>
           Завершенных проектов успешно
@@ -74,7 +100,7 @@
           </p>
         </div>
       </section>
-      <section class="block4">
+      <section class="block4" id="services">
         <h1>Основные услуги</h1>
         <div class="cards">
           <div class="card card1">
@@ -121,7 +147,7 @@
           </div>
         </div>
       </section>
-      <section class="block5">
+      <section class="block5" id="project">
         <h1>Наши проекты</h1>
         <div class="slider">
           <div class="img"></div>
@@ -143,7 +169,7 @@
         </div>
         <div class="button-black">Посмотреть все проекты</div>
       </section>
-      <section class="block6">
+      <section class="block6" id="process">
         <h1>Наш процесс работы</h1>
         <div class="selector">
           <div class="item1">
@@ -173,7 +199,7 @@
           </div>
         </div>
       </section>
-      <section class="block7">
+      <section class="block7" id="about" >
         <h1>Инструменты и технологии</h1>
 
         <div class="images">
@@ -263,7 +289,7 @@
           </div>
         </div>
       </section>
-      <section class="block8">
+      <section class="block8" id="contacts">
         <div class="item1">
           <div class="icon"></div>
           <div class="text1">Юрий Архипов</div>
@@ -287,7 +313,7 @@
             <div class="name"><input type="text" name="" id="" class="name" placeholder="Имя" /></div>
             <div class="email"><input type="email" name="" id="" class="email"  placeholder="E-mail"/></div>
             <div class="tel"><input type="tel" name="" id="" class="tel" placeholder="Телефон"/></div>
-            <div class="textarea"><textarea name="" id="" cols="30" placeholder="Message&#10Напишите своё сообщение..">
+            <div class="textarea"><textarea name="" id="" class="textarea">Message&#10Напишите своё сообщение..
             </textarea></div>
           </div>
         </div>
@@ -319,15 +345,21 @@
           
         </div>
         <div class="col3">
-          <div class="item1">Главная</div>
-          <div class="item2">Портфолио</div>
-          <div class="item3">Услуги</div>
-          <div class="item4">Процессы</div>
-          <div class="item5">О компании</div>
-          <div class="item6">Контакты</div>
+          <div class="item1"><a href="#main">Главная</a></div>
+          <div class="item2"><a href="#project">Портфолио</a></div>
+          <div class="item3"><a href="#services">Услуги</a></div>
+          <div class="item4"><a href="#process">Процессы</a></div>
+          <div class="item5"><a href="#about">О компании</a></div>
+          <div class="item6"><a href="#contacts">Контакты</a></div>
         </div>
       </div>
       <div class="row2">© Devcloud Solutions, Inc. 2021. We love our users!</div>
+      <a href="#header">
+        <div class="arrow-up"><svg width="34" height="57" viewBox="0 0 34 57" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <path d="M17 57.3999L17 1.08562M17 1.08562L33 17.7713M17 1.08562L1 17.7713" stroke="black" />
+        </svg></div>
+      </a>
     </footer>
+    
   </body>
 </html>

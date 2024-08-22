@@ -1,6 +1,15 @@
 :root {
   --font-family: Open Sans, sans-serif;
+  --color: #29A28C;
   font-family: Open Sans, sans-serif;
+  font-size: 1vw;
+}
+a{
+  text-decoration: none;
+  color: inherit;
+}
+a:hover{
+  color: var(--color);
 }
 * {
   padding: 0;
@@ -8,7 +17,7 @@
   box-sizing: border-box;
 }
 h1 {
-  font-size: 40px;
+  font-size: 2.5rem;
   font-weight: bold;
   text-align: center;
   margin: 10vw;
@@ -19,12 +28,13 @@ header {
   justify-content: space-between;
   position: absolute;
   width: 100%;
-  padding: 15px 70px;
+  padding: 1vw 4.375vw;
   align-items: center;
+  z-index: 1;
 }
 nav {
-  width: 889px;
-  height: 24px;
+  width: 55.625vw;
+  height: 1.5vw;
   /* display: inline-block;
 justify-content: space-between; */
 }
@@ -33,7 +43,7 @@ li {
   cursor: pointer;
   font-family: var(--font-family);
   font-weight: 400;
-  font-size: 18px;
+  font-size: 1.125rem;
   color: #fff;
 }
 ul {
@@ -45,33 +55,41 @@ ul {
 .logo {
   font-family: var(--font-family);
   font-weight: 700;
-  font-size: 18px;
+  font-size: 1.125rem;
   color: #fff;
   display: flex;
   align-items: center;
 }
 .logo figure {
-  width: 51px;
-  height: 51px;
+  width: 3.125vw;
+  height: 3.125vw;
   border-radius: 50%;
   background-color: #fff;
   background-image: url(https://ucarecdn.com/b4157a46-7c83-475d-afd0-e2d490c29bbd/);
   background-size: 118%;
-  background-position: -3px center;
-  margin: 0 5px;
+  background-position: -.1875vw center;
+  margin: 0 .3125vw;
 }
 .block1 div.figure {
   width: 100vw;
   height: 50vw;
-  background-image: url(https://ucarecdn.com/761233c4-7224-418d-b151-ea7bc1196250/);
-  background-size: cover;
   position: relative;
-  z-index: -2;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
   align-content: center;
+}
+.block1 div.figure::before {
+  content: "";
+  background-image: url(https://ucarecdn.com/761233c4-7224-418d-b151-ea7bc1196250/);
+  background-size: cover;
+  display: block;
+  width: 100vw;
+  height: 50vw;
+  background-color: #0d0c21a6;
+  position: absolute;
+  z-index: -2;
 }
 .block1 div.figure::after {
   content: "";
@@ -84,24 +102,59 @@ ul {
 }
 .block1 .figure .text h1 {
   font-family: "Open Sans", sans-serif;
-  font-size: 47px;
+  font-size: 2.9375rem;
   font-weight: 400;
   text-align: center;
   color: #fff;
   text-transform: uppercase;
-  -webkit-text-stroke-width: 1px;
+  -webkit-text-stroke-width: .0625vw;
   -webkit-text-stroke-color: black;
+  margin: 7vw auto 5vw auto;
 }
 .block1 .figure .text .button {
   text-align: center;
   color: #fff;
-  padding: 12px 39px;
-  border: 1px solid white;
-  border-radius: 50vh;
+  padding: .75vw 2.5vw;
+  border: .0625vw solid white;
+  border-radius: 50vw;
   width: fit-content;
   margin: auto;
-  margin-top: 5%;
+  /* margin-top: 5%; */
+  position: relative;
+  z-index: 4;
+  font-size: 1rem;
+  font-weight: lighter;
+  font-stretch: 200%;
+  cursor: pointer;
 }
+.block1 .figure .text .button:hover {
+  color: #29A28C;
+  text-decoration: none;
+  border: .0625vw solid #29A28C;
+  cursor: pointer;
+}
+.block1 .figure .arrow{
+  width: 5vw;
+  height: 6vw;
+  /* background-image: url(https://img.icons8.com/ios/80/ffffff/down--v1.png);
+  background-size: 100% 100%; */
+  margin: 2vw auto;
+  animation-duration: 2s;
+  animation-name: slidein;
+  animation-iteration-count: infinite;
+}
+@keyframes slidein {
+  0% {
+    transform: translateY(0%);
+  }
+  50% {
+    transform: translateY(50%);
+  }
+  100% {
+    transform: translateY(0);
+  }
+}
+/* <img width="50" height="50" src="https://img.icons8.com/ios/50/down--v1.png" alt="down--v1"/> */
 .block2 {
   display: flex;
   color: #000;
@@ -111,18 +164,18 @@ ul {
   justify-content: center;
 }
 .block2 h2 {
-  font-size: 48px;
+  font-size: 3rem;
   font-weight: 600;
 }
 .block2 p {
-  font-size: 16px;
+  font-size: 1rem;
   font-weight: 400;
 }
 .block2 div {
   padding: 1vw 5vw;
 }
 .rb {
-  border-right: 3px solid #29a28c;
+  border-right: .1875vw solid #29a28c;
 }
 .block3 {
   display: flex;
@@ -151,38 +204,40 @@ ul {
   justify-content: center;
 }
 .block3 blockquote {
-  font-size: 40px;
+  font-size: 2.5rem;
   font-weight: bold;
   margin: 2vw;
   position: relative;
 }
 .block3 blockquote::after {
-  width: 60px;
-  height: 60px;
+  width: 3.75vw;
+  height: 3.75vw;
   background: url("https://img.icons8.com/glyph-neue/64/d9d9d9/quote-right.png");
+  background-size: cover;
   position: absolute;
   content: "";
   top: 0;
   right: 0;
 }
 .block3 blockquote::before {
-  width: 60px;
-  height: 60px;
+  width: 3.75vw;
+  height: 3.75vw;
   background: url("https://img.icons8.com/glyph-neue/64/D9D9D9/quote-left.png");
+  background-size: cover;
   position: absolute;
   content: "";
   bottom: 0;
   left: 0;
 }
 .block3 .text {
-  font-size: 23px;
+  font-size: 1.4375rem;
   padding: 0 3vw;
   line-height: 130%;
   font-stretch: 200%;
   margin-top: 4vw;
 }
 /* .block3 .button{
-  font-size: 16px;
+  font-size: 1rem;
   font-weight: lighter;
   color: #fff;
   background-color: #000;
@@ -193,7 +248,7 @@ ul {
   margin: 0 auto 3vw auto;
 } */
 .block3 .bottom-text {
-  font-size: 13px;
+  font-size: .8125rem;
   font-weight: lighter;
   margin: 1vw;
   margin-top: 4vw;
@@ -226,13 +281,14 @@ ul {
 }
 .card::before {
   content: "";
-  top: 15px;
-  right: 15px;
+  top: 1vw;
+  right: 1vw;
   background-color: transparent;
   position: absolute;
   z-index: 3;
-  width: 60px;
-  height: 60px;
+  width: 3.75vw;
+  height: 3.75vw;
+  background-size: cover;
 }
 .card1::before {
   background-image: url(https://img.icons8.com/wired/60/ffffff/smartphone-tablet.png);
@@ -257,7 +313,7 @@ ul {
 }
 
 .card h3 {
-  font-size: 20px;
+  font-size: 1.25rem;
   text-transform: uppercase;
   font-weight: normal;
   line-height: 140%;
@@ -265,7 +321,7 @@ ul {
   padding: 1vw 3vw 1vw 1vw;
 }
 .card p {
-  font-size: 13px;
+  font-size: .8125rem;
   font-weight: normal;
   line-height: 150%;
   padding: 1vw;
@@ -275,38 +331,43 @@ ul {
   justify-content: space-between;
   padding: 1vw;
   width: 100%;
+  cursor: pointer;
 }
 .button .icon {
-  width: 50px;
-  height: 50px;
+  width: 3.125vw;
+  height: 3.125vw;
   background-image: url(https://img.icons8.com/ios/50/000000/cloud--v1.png);
+  background-size: cover;
 }
 .button .text {
   color: #000;
-  font-size: 16px;
+  font-size: 1rem;
   font-weight: normal;
-  line-height: 50px;
+  line-height: 3.125vw;
 }
 .button .arrow {
-  width: 50px;
-  height: 50px;
+  width: 3.125vw;
+  height: 3.125vw;
   background-image: url(https://img.icons8.com/ios/50/000000/long-arrow-right--v1.png);
+  background-size: cover;
 }
-.card.card1 .button .icon {
-  width: 50px;
-  height: 50px;
+.button:hover .icon {
+  width: 3.125vw;
+  height: 3.125vw;
   background-image: url(https://img.icons8.com/ios/50/29A28C/cloud--v1.png);
+  background-size: cover;
 }
-.card.card1 .button .text {
+.button:hover .text {
   color: #29a28c;
-  font-size: 16px;
+  font-size: 1rem;
   font-weight: normal;
-  line-height: 50px;
+  line-height: 3.125vw;
 }
-.card.card1 .button .arrow {
-  width: 50px;
-  height: 50px;
+.button:hover .arrow {
+  width: 3.125vw;
+  height: 3.125vw;
   background-image: url(https://img.icons8.com/ios/50/29A28C/long-arrow-right--v1.png);
+  background-size: cover;
 }
 .block5 .slider {
   display: flex;
@@ -332,12 +393,12 @@ ul {
   justify-content: center;
 }
 .block5 h3 {
-  font-size: 36px;
+  font-size: 2.25vw;
   font-weight: normal;
   text-transform: uppercase;
 }
 .block5 .text {
-  font-size: 18px;
+  font-size: 1.125rem;
   font-weight: normal;
   padding: 1vw 5vw 1vw 1vw;
   line-height: 150%;
@@ -346,7 +407,7 @@ ul {
   justify-content: left;
 }
 .block5 .slider .item2 .button .text {
-  font-size: 20px;
+  font-size: 1.25rem;
   text-transform: uppercase;
   line-height: 100%;
   text-align: center;
@@ -354,18 +415,20 @@ ul {
 }
 .block5 .slider::before {
   content: "";
-  width: 24px;
-  height: 24px;
+  width: 1.5vw;
+  height: 1.5vw;
   background-image: url(https://img.icons8.com/ios/24/back--v1.png);
+  background-size: cover;
   position: absolute;
   top: 50%;
   left: -5%;
 }
 .block5 .slider::after {
   content: "";
-  width: 24px;
-  height: 24px;
+  width: 1.5vw;
+  height: 1.5vw;
   background-image: url(https://img.icons8.com/ios/24/forward--v1.png);
+  background-size: cover;
   position: absolute;
   top: 50%;
   right: -5%;
@@ -374,15 +437,21 @@ ul {
 <img width="50" height="50" src="https://img.icons8.com/ios/24/forward--v1.png" alt="forward--v1"/> */
 
 .button-black {
-  font-size: 16px;
+  font-size: 1rem;
   font-weight: lighter;
   color: #fff;
   background-color: #000;
-  padding: 1vw;
-  height: 3vw;
-  border-radius: 1.5vw;
+  padding: 1vw 2vw;
+  border-radius: 2vw;
   width: fit-content;
-  margin: 0 auto 3vw auto;
+  margin: 1vw auto 3vw auto;
+  cursor: pointer;
+  border: 0.0625vw solid #000;
+}
+.button-black:hover {
+  color: #000;
+  background-color: #fff;
+  border: 0.0625vw solid #000;
 }
 .block6 .selector {
   display: flex;
@@ -398,15 +467,15 @@ ul {
 }
 .block6 .item1 div {
   margin: 1vw;
-  border: 1px solid #000;
+  border: .0625vw solid #000;
   width: 6vw;
   text-align: center;
-  font-size: 18px;
+  font-size: 1.125rem;
   line-height: 2.8vw;
 }
 .block6 .item1 .rec1 {
   color: #29a28c;
-  border: 1px solid #29a28c;
+  border: .0625vw solid #29a28c;
 }
 .block6 .item2 {
   width: 45vw;
@@ -422,19 +491,19 @@ ul {
   align-content: space-between;
 }
 .block6 .item3 h3 {
-  font-size: 36px;
+  font-size: 2.25vw;
   font-weight: normal;
   text-transform: uppercase;
   padding: 1vw;
 }
 .block6 .text {
-  font-size: 18px;
+  font-size: 1.125rem;
   font-weight: normal;
   padding: 1vw;
   line-height: 150%;
 }
 .block6 .selector .item3 .button .text {
-  font-size: 20px;
+  font-size: 1.25rem;
   text-transform: uppercase;
   line-height: 100%;
   text-align: center;
@@ -475,19 +544,19 @@ ul {
   background-size: cover;
 }
 .block8 .item1 .text1 {
-  font-size: 20px;
+  font-size: 1.25rem;
   text-transform: uppercase;
   line-height: 180%;
   /* padding: 0.5vw; */
 }
 .block8 .item1 .text2 {
-  font-size: 18px;
+  font-size: 1.125rem;
   line-height: 100%;
   font-weight: 300;
   /* padding: 0.5vw; */
 }
 .block8 .item1 .text3 {
-  font-size: 16px;
+  font-size: 1rem;
   line-height: 100%;
   font-weight: 300;
   padding: 0.5vw;
@@ -521,14 +590,14 @@ ul {
   padding: 5vw 10vw;
 }
 .block8 .item2 h2 {
-  /* font-size: 36px; */
+  /* font-size: 2.25vw; */
   font-weight: normal;
   text-align: center;
   text-transform: uppercase;
 }
 .block8 .item2 .inputs {
   background-color: transparent;
-  font-size: 18px;
+  font-size: 1.125rem;
   display: flex;
   flex-wrap: wrap;
   justify-content: space-between;
@@ -551,23 +620,23 @@ ul {
 /* .block8 .item2 .inputs .textarea {
   width: 100%;
 } */
-input {
+.block8 input {
   background-color: transparent;
   border: none;
   outline: none;
   margin: 1vw 0;
-  font-size: 18px;
+  font-size: 1.125rem;
   color: #fff8;
   padding: 0.5vw;
-  border-bottom: 1px solid #fff;
+  border-bottom: .0625vw solid #fff;
 }
 textarea {
   background-color: transparent;
   border: none;
   outline: none;
-  font-size: 18px;
+  font-size: 1.125rem;
   color: #fff8;
-  border: 1px solid #fff;
+  border: .0625vw solid #fff;
   border-radius: 1vw;
   width: 100%;
   height: 10vw;
@@ -588,7 +657,7 @@ input::placeholder, textarea::placeholder{
   background-image: url(https://img.icons8.com/ios/50/ffffff/attach.png);
   /* opacity: 50%; */
   background-size: cover;
-  border: 1px solid #fff;
+  border: .0625vw solid #fff;
   border-radius: 20%;
   position: absolute;
   bottom: 2vw;
@@ -602,7 +671,7 @@ input::placeholder, textarea::placeholder{
   background-image: url(https://img.icons8.com/ios/50/ffffff/telegram-app.png);
   /* opacity: 50%; */
   background-size: cover;
-  border: 1px solid #fff;
+  border: .0625vw solid #fff;
   border-radius: 20%;
   position: absolute;
   bottom: 2vw;
@@ -612,7 +681,7 @@ input::placeholder, textarea::placeholder{
 <img width="50" height="50" src="https://img.icons8.com/ios/50/telegram-app.png" alt="telegram-app"/> */
 footer .row1{
   width: 90vw;
-  border-bottom: 3px solid #BDBDBD;
+  border-bottom: .1875vw solid #BDBDBD;
   margin: auto;
   margin-top: 10vw;
   height: 25vw;
@@ -630,17 +699,17 @@ footer .row2{
 /* footer .row1 .col1{
   width: 30%;
   height: 100%;
-  border: 1px solid #ff0000;
+  border: .0625vw solid #ff0000;
 }
 footer .row1 .col2{
   width: 30%;
   height: 100%;
-  border: 1px solid #ff0000;
+  border: .0625vw solid #ff0000;
 }
 footer .row1 .col3{
   width: 40%;
   height: 100%;
-  border: 1px solid #ff0000;
+  border: .0625vw solid #ff0000;
 } */
 footer .row1 .col1, .col2, .col3{
   display: flex;
@@ -657,12 +726,12 @@ footer .row1 .col1 .icon{
   padding: 1vw;
 }
 footer .row1 .col1 .icon-text{
-  font-size: 20px;
+  font-size: 1.25rem;
   font-weight: 700;
   padding: 1vw;
 }
 footer .row1 .col1 .text{
-  font-size: 18px;
+  font-size: 1.125rem;
   text-transform: uppercase;
   font-weight: 300;
   padding: 0 1vw 1vw 5vw;
@@ -671,7 +740,7 @@ footer .row1 .col1 .text{
 footer .row1 .col3 div{
   padding: 1vw 1vw;
   width: 45%;
-  font-size: 18px;
+  font-size: 1.125rem;
   font-weight: 300;
 }
 /* footer .row1 .col2{
@@ -693,7 +762,7 @@ footer .row1 .col2 .tel, .mail1, .mail2 {
   align-content: center;
   justify-content: space-between;
   width: 18vw;
-  font-size: 18px;
+  font-size: 1.125rem;
   font-weight: 300;
   text-transform: uppercase;
   padding: 0.5vw;
@@ -718,10 +787,25 @@ footer .row1 .col2 .mail2 .icon3{
   background-size: cover;
 }
 footer .row1 .col2 .text2{
-  font-size: 13px;
+  font-size: .8125rem;
   text-transform: uppercase;
 }
 /* <img width="50" height="50" src="https://img.icons8.com/ios-filled/50/phone.png" alt="phone"/>
 <img width="50" height="50" src="https://img.icons8.com/ios/50/mail.png" alt="mail"/>
 <img width="50" height="50" src="https://img.icons8.com/ios-filled/50/whatsapp--v1.png" alt="whatsapp--v1"/>
 <img width="50" height="50" src="https://img.icons8.com/ios-filled/50/telegram-app.png" alt="telegram-app"/> */
+/* <img width="50" height="50" src="https://img.icons8.com/ios/50/long-arrow-up--v1.png" alt="long-arrow-up--v1"/> */
+footer{
+  position: relative;
+}
+
+.arrow-up {
+/* background-image: url(https://img.icons8.com/ios/50/long-arrow-up--v1.png);
+background-size: cover; */
+width: 2.625vw;
+height: 3.75vw;
+position: absolute;
+bottom: 20vw;
+right: 5vw; 
+/* display: none; */
+}
