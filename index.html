@@ -3,14 +3,22 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Document</title>
+    <title>DEVCLOUD SOLUTIONS</title>
+    <link
+      rel="icon"
+      type="image/x-icon"
+      href="https://ucarecdn.com/b4157a46-7c83-475d-afd0-e2d490c29bbd/"
+    />
     <link rel="stylesheet" href="style.css" />
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap"
+      rel="stylesheet"
+    />
   </head>
   <body>
-    <header id="header">
+    <header>
       <div class="logo">
         <figure>
           <!-- <img src="https://ucarecdn.com/b4157a46-7c83-475d-afd0-e2d490c29bbd/" alt=""> -->
@@ -20,11 +28,31 @@
       <nav>
         <ul>
           <li><a href="#main">Главная</a></li>
-          <li><a href="#services">
-            Услуги <svg width="12" height="8" viewBox="0 0 12 8" fill="none" xmlns="http://www.w3.org/2000/svg">
-              <path d="M0 0.555603L6 6.5556L12 0.555603" stroke="white" />
-            </svg>
-          </a></li>
+          <li>
+            <a href="#services">
+              Услуги
+              <ul class="hidden_menu">
+                <a href="#services">
+                  <li>Разработка мобильных приложений</li>
+                </a>
+                <a href="#services">
+                  <li>Разработка программного обеспечения</li>
+                </a>
+                <a href="#services">
+                  <li>Разработка веб приложений</li>
+                </a>
+              </ul>
+              <svg
+                width="12"
+                height="8"
+                viewBox="0 0 12 8"
+                fill="none"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path d="M0 0.555603L6 6.5556L12 0.555603" stroke="white" />
+              </svg>
+            </a>
+          </li>
           <li><a href="#process">Как мы работаем</a></li>
           <li><a href="#project">Портфолио</a></li>
           <li><a href="#about">О нас</a></li>
@@ -33,7 +61,7 @@
       </nav>
     </header>
     <main>
-      <section class="block1">
+      <section class="banner" id="main">
         <div class="figure">
           <div class="text">
             <h1>
@@ -42,31 +70,31 @@
             </h1>
             <div class="button"><a href="#">Запросить консультацию</a></div>
             <a href="#main">
-              <div class="arrow"><svg width="50" height="80" viewBox="0 0 50 80" fill="none" xmlns="http://www.w3.org/2000/svg">
-                <g clip-path="url(#clip0_1_127)" filter="url(#filter0_d_1_127)">
-                  <path d="M25 -18V71M25 71L5 44.6296M25 71L45 44.6296" stroke="white" stroke-width="2" />
-                </g>
-                <defs>
-                  <filter id="filter0_d_1_127" x="-4" y="0" width="57.4288" height="79.1555" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
-                    <feFlood flood-opacity="0" result="BackgroundImageFix" />
-                    <feColorMatrix in="SourceAlpha" type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0" result="hardAlpha" />
-                    <feOffset dy="4" />
-                    <feGaussianBlur stdDeviation="2" />
-                    <feComposite in2="hardAlpha" operator="out" />
-                    <feColorMatrix type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0.25 0" />
-                    <feBlend mode="normal" in2="BackgroundImageFix" result="effect1_dropShadow_1_127" />
-                    <feBlend mode="normal" in="SourceGraphic" in2="effect1_dropShadow_1_127" result="shape" />
-                  </filter>
-                  <clipPath id="clip0_1_127">
-                    <rect width="49.4287" height="71.1555" fill="white" />
-                  </clipPath>
-                </defs>
-              </svg></div>
+              <div class="arrow">
+                <svg
+                  width="50"
+                  height="80"
+                  viewBox="0 0 50 80"
+                  fill="none"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <g
+                    clip-path="url(#clip0_1_127)"
+                    filter="url(#filter0_d_1_127)"
+                  >
+                    <path
+                      d="M25 -18V71M25 71L5 44.6296M25 71L45 44.6296"
+                      stroke="white"
+                      stroke-width="2"
+                    />
+                  </g>
+                </svg>
+              </div>
             </a>
           </div>
         </div>
       </section>
-      <section class="block2" id="main">
+      <section class="statistics">
         <div class="rb">
           <h2>98%</h2>
           Завершенных проектов успешно
@@ -84,7 +112,7 @@
           к эффективности бизнеса
         </div>
       </section>
-      <section class="block3">
+      <section class="guarantees">
         <div class="img item1"></div>
         <div class="item2">
           <blockquote>Гарантируем качество и выполнение в сроки</blockquote>
@@ -100,7 +128,7 @@
           </p>
         </div>
       </section>
-      <section class="block4" id="services">
+      <section class="services" id="services">
         <h1>Основные услуги</h1>
         <div class="cards">
           <div class="card card1">
@@ -147,59 +175,211 @@
           </div>
         </div>
       </section>
-      <section class="block5" id="project">
+      <section class="project" id="project">
         <h1>Наши проекты</h1>
-        <div class="slider">
-          <div class="img"></div>
-          <div class="item2">
-            <h3>Компания по производству фотокниг Fototeca</h3>
-            <div class="text">
-              Программное решение, автоматизирующее производство изделий – от
-              создания дизайна до выдачи клиенту. Была создана система, которая
-              позволяет профессиональному фотографу – клиенту компании —
-              формировать изделие (фотокнигу) в нужном формате и виде, оплатить
-              и сразу передать заказ в производство.
+        <input type="radio" id="project1" name="project" checked>
+        <input type="radio" id="project2" name="project">
+        <input type="radio" id="project3" name="project">
+        <div class="project__slider">
+          <div class="project__slide project__slide_1">
+            <label for="project3" class="arrow-left arrow-left_1"></label>
+            <div class="img"></div>
+            <div class="item2">
+              <h3>1. Компания по производству фотокниг Fototeca</h3>
+              <div class="text">
+                Программное решение, автоматизирующее производство изделий – от
+                создания дизайна до выдачи клиенту. Была создана система, которая
+                позволяет профессиональному фотографу – клиенту компании —
+                формировать изделие (фотокнигу) в нужном формате и виде, оплатить
+                и сразу передать заказ в производство.
+              </div>
+              <div class="button">
+                <div class="icon"></div>
+                <div class="text">Узнать больше</div>
+                <div class="arrow"></div>
+              </div>
             </div>
-            <div class="button">
-              <div class="icon"></div>
-              <div class="text">Узнать больше</div>
-              <div class="arrow"></div>
+            <label for="project2"  class="arrow-right arrow-right_1"></label>
+          </div>
+          <div class="project__slide project__slide_2">
+            <label for="project1"  class="arrow-left arrow-left_2"></label>
+            <div class="img"></div>
+            <div class="item2">
+              <h3>2. Компания по производству фотокниг Fototeca</h3>
+              <div class="text">
+                Программное решение, автоматизирующее производство изделий – от
+                создания дизайна до выдачи клиенту. Была создана система, которая
+                позволяет профессиональному фотографу – клиенту компании —
+                формировать изделие (фотокнигу) в нужном формате и виде, оплатить
+                и сразу передать заказ в производство.
+              </div>
+              <div class="button">
+                <div class="icon"></div>
+                <div class="text">Узнать больше</div>
+                <div class="arrow"></div>
+              </div>
             </div>
+            <label for="project3" class="arrow-right arrow-right_2"></label>
+          </div>
+          <div class="project__slide project__slide_3">
+            <label for="project2"  class="arrow-left arrow-left_3"></label>
+            <div class="img"></div>
+            <div class="item2">
+              <h3>3. Компания по производству фотокниг Fototeca</h3>
+              <div class="text">
+                Программное решение, автоматизирующее производство изделий – от
+                создания дизайна до выдачи клиенту. Была создана система, которая
+                позволяет профессиональному фотографу – клиенту компании —
+                формировать изделие (фотокнигу) в нужном формате и виде, оплатить
+                и сразу передать заказ в производство.
+              </div>
+              <div class="button">
+                <div class="icon"></div>
+                <div class="text">Узнать больше</div>
+                <div class="arrow"></div>
+              </div>
+            </div>
+            <label for="project1" class="arrow-right arrow-right_3"></label>
           </div>
         </div>
         <div class="button-black">Посмотреть все проекты</div>
       </section>
-      <section class="block6" id="process">
+      <section class="process" id="process">
         <h1>Наш процесс работы</h1>
         <div class="selector">
+          <input type="radio" id="rec1" name="rec" checked>
+          <input type="radio" id="rec2" name="rec">
+          <input type="radio" id="rec3" name="rec">
+          <input type="radio" id="rec4" name="rec">
+          <input type="radio" id="rec5" name="rec">
+          <input type="radio" id="rec6" name="rec">
           <div class="item1">
-            <div class="rec1">1</div>
-            <div class="rec2">2</div>
-            <div class="rec3">3</div>
-            <div class="rec4">4</div>
-            <div class="rec5">5</div>
-            <div class="rec6">6</div>
+            <label for="rec1">1</label>
+            <label for="rec2">2</label>
+            <label for="rec3">3</label>
+            <label for="rec4">4</label>
+            <label for="rec5">5</label>
+            <label for="rec6">6</label>
           </div>
-          <div class="item2 img"></div>
-          <div class="item3">
-            <h3>1. Мастерская открытий</h3>
-            <div class="text">
-              Мы придаем первостепенное значение пониманию и документированию
-              входов, предпочтений клиентов, дизайна и брендов. И проясните все
-              открытые моменты, чтобы получить точное и ясное представление о
-              целях как клиентов, так и проекта. Мы работаем в рамках
-              совместного подхода с участием заинтересованных сторон, чтобы
-              согласовать бизнес-процессы.
+          <div class="process__slider">
+            <div class="slide1">
+              <div class="item2 img"></div>
+              <div class="item3">
+                <h3>1. Мастерская открытий</h3>
+                <div class="text">
+                  Мы придаем первостепенное значение пониманию и документированию
+                  входов, предпочтений клиентов, дизайна и брендов. И проясните все
+                  открытые моменты, чтобы получить точное и ясное представление о
+                  целях как клиентов, так и проекта. Мы работаем в рамках
+                  совместного подхода с участием заинтересованных сторон, чтобы
+                  согласовать бизнес-процессы.
+                </div>
+                <div class="button">
+                  <div class="icon"></div>
+                  <div class="text">Узнать больше</div>
+                  <div class="arrow"></div>
+                </div>
+              </div>
             </div>
-            <div class="button">
-              <div class="icon"></div>
-              <div class="text">Узнать больше</div>
-              <div class="arrow"></div>
+            <div class="slide2">
+              <div class="item2 img"></div>
+              <div class="item3">
+                <h3>2. Мастерская открытий</h3>
+                <div class="text">
+                  Мы придаем первостепенное значение пониманию и документированию
+                  входов, предпочтений клиентов, дизайна и брендов. И проясните все
+                  открытые моменты, чтобы получить точное и ясное представление о
+                  целях как клиентов, так и проекта. Мы работаем в рамках
+                  совместного подхода с участием заинтересованных сторон, чтобы
+                  согласовать бизнес-процессы.
+                </div>
+                <div class="button">
+                  <div class="icon"></div>
+                  <div class="text">Узнать больше</div>
+                  <div class="arrow"></div>
+                </div>
+              </div>
+            </div>
+            <div class="slide3">
+              <div class="item2 img"></div>
+              <div class="item3">
+                <h3>3. Мастерская открытий</h3>
+                <div class="text">
+                  Мы придаем первостепенное значение пониманию и документированию
+                  входов, предпочтений клиентов, дизайна и брендов. И проясните все
+                  открытые моменты, чтобы получить точное и ясное представление о
+                  целях как клиентов, так и проекта. Мы работаем в рамках
+                  совместного подхода с участием заинтересованных сторон, чтобы
+                  согласовать бизнес-процессы.
+                </div>
+                <div class="button">
+                  <div class="icon"></div>
+                  <div class="text">Узнать больше</div>
+                  <div class="arrow"></div>
+                </div>
+              </div>
+            </div>
+            <div class="slide4">
+              <div class="item2 img"></div>
+              <div class="item3">
+                <h3>4. Мастерская открытий</h3>
+                <div class="text">
+                  Мы придаем первостепенное значение пониманию и документированию
+                  входов, предпочтений клиентов, дизайна и брендов. И проясните все
+                  открытые моменты, чтобы получить точное и ясное представление о
+                  целях как клиентов, так и проекта. Мы работаем в рамках
+                  совместного подхода с участием заинтересованных сторон, чтобы
+                  согласовать бизнес-процессы.
+                </div>
+                <div class="button">
+                  <div class="icon"></div>
+                  <div class="text">Узнать больше</div>
+                  <div class="arrow"></div>
+                </div>
+              </div>
+            </div>
+            <div class="slide5">
+              <div class="item2 img"></div>
+              <div class="item3">
+                <h3>5. Мастерская открытий</h3>
+                <div class="text">
+                  Мы придаем первостепенное значение пониманию и документированию
+                  входов, предпочтений клиентов, дизайна и брендов. И проясните все
+                  открытые моменты, чтобы получить точное и ясное представление о
+                  целях как клиентов, так и проекта. Мы работаем в рамках
+                  совместного подхода с участием заинтересованных сторон, чтобы
+                  согласовать бизнес-процессы.
+                </div>
+                <div class="button">
+                  <div class="icon"></div>
+                  <div class="text">Узнать больше</div>
+                  <div class="arrow"></div>
+                </div>
+              </div>
+            </div>
+            <div class="slide6">
+              <div class="item2 img"></div>
+              <div class="item3">
+                <h3>6. Мастерская открытий</h3>
+                <div class="text">
+                  Мы придаем первостепенное значение пониманию и документированию
+                  входов, предпочтений клиентов, дизайна и брендов. И проясните все
+                  открытые моменты, чтобы получить точное и ясное представление о
+                  целях как клиентов, так и проекта. Мы работаем в рамках
+                  совместного подхода с участием заинтересованных сторон, чтобы
+                  согласовать бизнес-процессы.
+                </div>
+                <div class="button">
+                  <div class="icon"></div>
+                  <div class="text">Узнать больше</div>
+                  <div class="arrow"></div>
+                </div>
+              </div>
             </div>
           </div>
         </div>
       </section>
-      <section class="block7" id="about" >
+      <section class="about" id="about">
         <h1>Инструменты и технологии</h1>
 
         <div class="images">
@@ -289,7 +469,7 @@
           </div>
         </div>
       </section>
-      <section class="block8" id="contacts">
+      <section class="contacts" id="contacts">
         <div class="item1">
           <div class="icon"></div>
           <div class="text1">Юрий Архипов</div>
@@ -329,20 +509,21 @@
         <div class="col2">
           <div class="tel">
             <div class="icon"></div>
-            <div>+7 (727) 334-21-45<br>
-              +7 (707) 998-93-90</div>
+            <div>
+              +7 (727) 334-21-45<br />
+              +7 (707) 998-93-90
+            </div>
           </div>
           <div class="mail1">
             <div class="icon1"></div>
             <div class="text1">info@devcloud.kz</div>
           </div>
-            <div class="mail2">
-              <div class="icon2"></div>
-              <div class="text2">Whatsapp</div>
-              <div class="icon3"></div>
-              <div class="text2">telegram</div>
-            </div>
-          
+          <div class="mail2">
+            <div class="icon2"></div>
+            <div class="text2">Whatsapp</div>
+            <div class="icon3"></div>
+            <div class="text2">telegram</div>
+          </div>
         </div>
         <div class="col3">
           <div class="item1"><a href="#main">Главная</a></div>
@@ -353,13 +534,25 @@
           <div class="item6"><a href="#contacts">Контакты</a></div>
         </div>
       </div>
-      <div class="row2">© Devcloud Solutions, Inc. 2021. We love our users!</div>
-      <a href="#header">
-        <div class="arrow-up"><svg width="34" height="57" viewBox="0 0 34 57" fill="none" xmlns="http://www.w3.org/2000/svg">
-          <path d="M17 57.3999L17 1.08562M17 1.08562L33 17.7713M17 1.08562L1 17.7713" stroke="black" />
-        </svg></div>
+      <div class="row2">
+        © Devcloud Solutions, Inc. 2021. We love our users!
+      </div>
+      <a href="#main">
+        <div class="arrow-up">
+          <svg
+            width="34"
+            height="57"
+            viewBox="0 0 34 57"
+            fill="none"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <path
+              d="M17 57.3999L17 1.08562M17 1.08562L33 17.7713M17 1.08562L1 17.7713"
+              stroke="black"
+            />
+          </svg>
+        </div>
       </a>
     </footer>
-    
   </body>
 </html>

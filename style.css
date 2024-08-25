@@ -1,14 +1,16 @@
 :root {
   --font-family: Open Sans, sans-serif;
-  --color: #29A28C;
+  --color: #29a28c;
   font-family: Open Sans, sans-serif;
   font-size: 1vw;
+  /* width: 100vw; */
+  scroll-behavior: smooth;
 }
-a{
+a {
   text-decoration: none;
   color: inherit;
 }
-a:hover{
+a:hover {
   color: var(--color);
 }
 * {
@@ -20,23 +22,18 @@ h1 {
   font-size: 2.5rem;
   font-weight: bold;
   text-align: center;
-  margin: 10vw;
+  padding: 5vw;
+  margin: 5vw;
 }
 header {
-  background-color: #29a28c1c;
+  background-color: #2f3c47bd;
   display: flex;
   justify-content: space-between;
-  position: absolute;
+  position: fixed;
   width: 100%;
-  padding: 1vw 4.375vw;
+  padding: 0 4.375vw;
   align-items: center;
   z-index: 1;
-}
-nav {
-  width: 55.625vw;
-  height: 1.5vw;
-  /* display: inline-block;
-justify-content: space-between; */
 }
 li {
   text-align: center;
@@ -45,12 +42,44 @@ li {
   font-weight: 400;
   font-size: 1.125rem;
   color: #fff;
+  position: relative;
+  padding: 2vw;
+  /* margin: 1vw; */
 }
 ul {
   list-style-type: none;
   display: flex;
   justify-content: space-between;
   align-items: center;
+}
+li ul.hidden_menu {
+  display: none;
+  position: absolute;
+  /* width: 30vw;
+  top: 100%;
+  left: -15vw; */
+  width: 300%;
+  top: 100%;
+  left: 0;
+  /* margin: 2vw; */
+  padding: 0.5vw;
+  line-height: 2vw;
+  background-color: #2f3c47bd;
+}
+li ul.hidden_menu li {
+  padding: 0.5vw;
+}
+li:hover ul.hidden_menu {
+  display: block;
+}
+li:hover ul.hidden_menu + svg {
+  transform: rotate(180deg) translate(0, 0.1vw);
+}
+a:hover ~ svg path {
+  stroke: var(--color);
+}
+li:hover ul.hidden_menu li:hover {
+  color: var(--color);
 }
 .logo {
   font-family: var(--font-family);
@@ -67,10 +96,10 @@ ul {
   background-color: #fff;
   background-image: url(https://ucarecdn.com/b4157a46-7c83-475d-afd0-e2d490c29bbd/);
   background-size: 118%;
-  background-position: -.1875vw center;
-  margin: 0 .3125vw;
+  background-position: -0.1875vw center;
+  margin: 0 0.3125vw;
 }
-.block1 div.figure {
+.banner div.figure {
   width: 100vw;
   height: 50vw;
   position: relative;
@@ -79,47 +108,30 @@ ul {
   justify-content: center;
   align-items: center;
   align-content: center;
-}
-.block1 div.figure::before {
-  content: "";
-  background-image: url(https://ucarecdn.com/761233c4-7224-418d-b151-ea7bc1196250/);
   background-size: cover;
-  display: block;
-  width: 100vw;
-  height: 50vw;
-  background-color: #0d0c21a6;
-  position: absolute;
-  z-index: -2;
+  background: 
+    linear-gradient(#0d0c21a6, #0d0c21a6), 
+    url(https://ucarecdn.com/761233c4-7224-418d-b151-ea7bc1196250/);
 }
-.block1 div.figure::after {
-  content: "";
-  display: block;
-  width: 100vw;
-  height: 50vw;
-  background-color: #0d0c21a6;
-  position: absolute;
-  z-index: -1;
-}
-.block1 .figure .text h1 {
+.banner .figure .text h1 {
   font-family: "Open Sans", sans-serif;
   font-size: 2.9375rem;
   font-weight: 400;
   text-align: center;
   color: #fff;
   text-transform: uppercase;
-  -webkit-text-stroke-width: .0625vw;
+  -webkit-text-stroke-width: 0.0625vw;
   -webkit-text-stroke-color: black;
   margin: 7vw auto 5vw auto;
 }
-.block1 .figure .text .button {
+.banner .figure .text .button {
   text-align: center;
   color: #fff;
-  padding: .75vw 2.5vw;
-  border: .0625vw solid white;
+  padding: 0.75vw 2.5vw;
+  border: 0.0625vw solid white;
   border-radius: 50vw;
   width: fit-content;
   margin: auto;
-  /* margin-top: 5%; */
   position: relative;
   z-index: 4;
   font-size: 1rem;
@@ -127,21 +139,23 @@ ul {
   font-stretch: 200%;
   cursor: pointer;
 }
-.block1 .figure .text .button:hover {
-  color: #29A28C;
+.banner .figure .text .button:hover {
+  color: #29a28c;
   text-decoration: none;
-  border: .0625vw solid #29A28C;
+  border: 0.0625vw solid #29a28c;
   cursor: pointer;
 }
-.block1 .figure .arrow{
+.banner .figure .arrow {
   width: 5vw;
   height: 6vw;
-  /* background-image: url(https://img.icons8.com/ios/80/ffffff/down--v1.png);
-  background-size: 100% 100%; */
   margin: 2vw auto;
   animation-duration: 2s;
   animation-name: slidein;
   animation-iteration-count: infinite;
+  text-align: center;
+}
+.banner .figure .arrow svg {
+  margin: auto;
 }
 @keyframes slidein {
   0% {
@@ -154,8 +168,7 @@ ul {
     transform: translateY(0);
   }
 }
-/* <img width="50" height="50" src="https://img.icons8.com/ios/50/down--v1.png" alt="down--v1"/> */
-.block2 {
+.statistics {
   display: flex;
   color: #000;
   top: 50vw;
@@ -163,21 +176,21 @@ ul {
   text-align: center;
   justify-content: center;
 }
-.block2 h2 {
+.statistics h2 {
   font-size: 3rem;
   font-weight: 600;
 }
-.block2 p {
+.statistics p {
   font-size: 1rem;
   font-weight: 400;
 }
-.block2 div {
+.statistics div {
   padding: 1vw 5vw;
 }
 .rb {
-  border-right: .1875vw solid #29a28c;
+  border-right: 0.1875vw solid #29a28c;
 }
-.block3 {
+.guarantees {
   display: flex;
   color: #000;
   top: 50vw;
@@ -185,7 +198,7 @@ ul {
   text-align: center;
   justify-content: center;
 }
-.block3 .item1 {
+.guarantees .item1 {
   padding: 0;
   margin: 0;
   width: 45vw;
@@ -193,7 +206,7 @@ ul {
   background-image: url(https://ucarecdn.com/83398f66-832a-4a52-9930-0549e372be61/);
   background-size: cover;
 }
-.block3 .item2 {
+.guarantees .item2 {
   padding: 1vw;
   margin: 0;
   width: 45vw;
@@ -203,13 +216,13 @@ ul {
   align-content: space-between;
   justify-content: center;
 }
-.block3 blockquote {
+.guarantees blockquote {
   font-size: 2.5rem;
   font-weight: bold;
   margin: 2vw;
   position: relative;
 }
-.block3 blockquote::after {
+.guarantees blockquote::after {
   width: 3.75vw;
   height: 3.75vw;
   background: url("https://img.icons8.com/glyph-neue/64/d9d9d9/quote-right.png");
@@ -219,7 +232,7 @@ ul {
   top: 0;
   right: 0;
 }
-.block3 blockquote::before {
+.guarantees blockquote::before {
   width: 3.75vw;
   height: 3.75vw;
   background: url("https://img.icons8.com/glyph-neue/64/D9D9D9/quote-left.png");
@@ -229,26 +242,15 @@ ul {
   bottom: 0;
   left: 0;
 }
-.block3 .text {
+.guarantees .text {
   font-size: 1.4375rem;
   padding: 0 3vw;
   line-height: 130%;
   font-stretch: 200%;
   margin-top: 4vw;
 }
-/* .block3 .button{
-  font-size: 1rem;
-  font-weight: lighter;
-  color: #fff;
-  background-color: #000;
-  padding: 1vw;
-  height: 3vw;
-  border-radius: 1.5vw;
-  width: fit-content;
-  margin: 0 auto 3vw auto;
-} */
-.block3 .bottom-text {
-  font-size: .8125rem;
+.guarantees .bottom-text {
+  font-size: 0.8125rem;
   font-weight: lighter;
   margin: 1vw;
   margin-top: 4vw;
@@ -257,7 +259,6 @@ ul {
   display: flex;
   justify-content: center;
   gap: 5vw;
-  margin: 5vw;
 }
 .card {
   /* background-color: #000; */
@@ -299,19 +300,11 @@ ul {
 .card3::before {
   background-image: url(https://img.icons8.com/ios/60/ffffff/internet--v1.png);
 }
-/* <img width="50" height="50" src="https://img.icons8.com/ios/50/multiple-devices.png" alt="multiple-devices"/>
-<img width="64" height="64" src="https://img.icons8.com/wired/64/multiple-devices.png" alt="multiple-devices"/>
-<img width="50" height="50" src="https://img.icons8.com/ios/50/internet--v1.png" alt="internet--v1"/> 
-<img width="50" height="50" src="https://img.icons8.com/ios/50/cloud--v1.png" alt="cloud--v1"/>
-<img width="50" height="50" src="https://img.icons8.com/ios/50/long-arrow-right--v1.png" alt="long-arrow-right--v1"/>
-<img width="64" height="64" src="https://img.icons8.com/pastel-glyph/64/laptop-and-phone.png" alt="laptop-and-phone"/>
-<img width="64" height="64" src="https://img.icons8.com/wired/64/smartphone-tablet.png" alt="smartphone-tablet"/>*/
 .card {
   display: flex;
   flex-wrap: wrap;
   align-content: space-between;
 }
-
 .card h3 {
   font-size: 1.25rem;
   text-transform: uppercase;
@@ -321,7 +314,7 @@ ul {
   padding: 1vw 3vw 1vw 1vw;
 }
 .card p {
-  font-size: .8125rem;
+  font-size: 0.8125rem;
   font-weight: normal;
   line-height: 150%;
   padding: 1vw;
@@ -369,73 +362,81 @@ ul {
   background-image: url(https://img.icons8.com/ios/50/29A28C/long-arrow-right--v1.png);
   background-size: cover;
 }
-.block5 .slider {
+.project .project__slider {
   display: flex;
-  margin: 5vw 10vw;
-  position: relative;
+  transition: 0.6s;
 }
-.block5 .slider .img {
+#project1:checked ~ .project__slider {
+  margin-left: 0;
+}
+#project2:checked ~ .project__slider {
+  margin-left: -100vw;
+}
+#project3:checked ~ .project__slider {
+  margin-left: -200vw;
+}
+.project .project__slide {
+  display: flex;
+  position: relative;
+  margin: 0 10vw;
+}
+.project .project__slider .project__slide .img {
   padding: 0;
   margin: 0;
-  width: 40vw;
+  width: 35vw;
   height: 30vw;
   background-image: url(https://ucarecdn.com/26b4a8e2-88ae-42b0-81f7-90bcf30ad7ef/);
   background-size: cover;
 }
-.block5 .item2 {
+.project .project__slider .project__slide .item2 {
   padding: 1vw;
   margin: 0;
-  width: 50vw;
+  width: 45vw;
   height: 30vw;
   display: flex;
   flex-wrap: wrap;
   align-content: space-between;
   justify-content: center;
 }
-.block5 h3 {
+.project h3 {
   font-size: 2.25vw;
   font-weight: normal;
   text-transform: uppercase;
 }
-.block5 .text {
+.project .text {
   font-size: 1.125rem;
   font-weight: normal;
   padding: 1vw 5vw 1vw 1vw;
   line-height: 150%;
 }
-.block5 .button {
+.project .button {
   justify-content: left;
 }
-.block5 .slider .item2 .button .text {
+.project .project__slider .project__slide  .item2 .button .text {
   font-size: 1.25rem;
   text-transform: uppercase;
   line-height: 100%;
   text-align: center;
   padding: 1vw;
 }
-.block5 .slider::before {
-  content: "";
+.arrow-left{
   width: 1.5vw;
   height: 1.5vw;
   background-image: url(https://img.icons8.com/ios/24/back--v1.png);
   background-size: cover;
   position: absolute;
   top: 50%;
-  left: -5%;
+  left: -2vw;
 }
-.block5 .slider::after {
-  content: "";
+.arrow-right{
   width: 1.5vw;
   height: 1.5vw;
   background-image: url(https://img.icons8.com/ios/24/forward--v1.png);
   background-size: cover;
   position: absolute;
   top: 50%;
-  right: -5%;
+  right: -2vw;
 }
-/* <img width="50" height="50" src="https://img.icons8.com/ios/24/back--v1.png" alt="back--v1"/>
-<img width="50" height="50" src="https://img.icons8.com/ios/24/forward--v1.png" alt="forward--v1"/> */
-
 .button-black {
   font-size: 1rem;
   font-weight: lighter;
@@ -447,84 +448,91 @@ ul {
   margin: 1vw auto 3vw auto;
   cursor: pointer;
   border: 0.0625vw solid #000;
+  box-shadow: 4px 4px 7px 0 rgba(0, 0, 0, 0.25);
 }
 .button-black:hover {
   color: #000;
   background-color: #fff;
   border: 0.0625vw solid #000;
 }
-.block6 .selector {
+.process .selector {
   display: flex;
   justify-content: space-between;
   margin: 5vw;
   padding: 0;
 }
-.block6 .item1 {
+.process .item1 {
   width: 8vw;
   height: 30vw;
   display: flex;
   flex-wrap: wrap;
 }
-.block6 .item1 div {
+.process .item1 label {
   margin: 1vw;
-  border: .0625vw solid #000;
+  border: 0.0625vw solid #000;
   width: 6vw;
   text-align: center;
   font-size: 1.125rem;
   line-height: 2.8vw;
+  background-color: transparent;
 }
-.block6 .item1 .rec1 {
+/* .process .item1 .rec1 {
   color: #29a28c;
   border: .0625vw solid #29a28c;
-}
-.block6 .item2 {
+} */
+.process .item2 {
   width: 45vw;
   height: 30vw;
   background-image: url(https://ucarecdn.com/5a556d3e-6c7c-4715-9128-e7f2ebe384cb/);
   background-size: cover;
 }
-.block6 .item3 {
+.process .item3 {
   width: 35vw;
   height: 30vw;
   display: flex;
   flex-wrap: wrap;
   align-content: space-between;
 }
-.block6 .item3 h3 {
+.process .item3 h3 {
   font-size: 2.25vw;
   font-weight: normal;
   text-transform: uppercase;
   padding: 1vw;
 }
-.block6 .text {
+.process .text {
   font-size: 1.125rem;
   font-weight: normal;
   padding: 1vw;
   line-height: 150%;
 }
-.block6 .selector .item3 .button .text {
+.process .selector .item3 .button .text {
   font-size: 1.25rem;
   text-transform: uppercase;
   line-height: 100%;
   text-align: center;
 }
-.block6 .button {
+.process .button {
   justify-content: left;
 }
-.block7 .images {
+.about .images {
   display: flex;
   flex-wrap: wrap;
   gap: 5vw;
-  margin: 10vw 5vw;
+  margin: 5vw 5vw 0vw;
   justify-content: space-between;
 }
-.block7 img {
+.about img {
   width: 7vw;
+  transition: 0.3s;
 }
-.block8 {
+.about img:hover {
+  transform: scale(1.5);
+}
+.contacts {
   display: flex;
+  padding-top: 10vw;
 }
-.block8 .item1 {
+.contacts .item1 {
   width: 45vw;
   height: 30vw;
   background-color: #027b6610;
@@ -534,28 +542,28 @@ ul {
   text-align: center;
   padding: 5vw;
 }
-.block8 .item1 div {
+.contacts .item1 div {
   width: 100%;
 }
-.block8 .item1 .icon {
+.contacts .item1 .icon {
   width: 7vw;
   height: 7vw;
   background-image: url(https://ucarecdn.com/b879c200-500c-4402-ac21-3de2cdca612c/);
   background-size: cover;
 }
-.block8 .item1 .text1 {
+.contacts .item1 .text1 {
   font-size: 1.25rem;
   text-transform: uppercase;
   line-height: 180%;
   /* padding: 0.5vw; */
 }
-.block8 .item1 .text2 {
+.contacts .item1 .text2 {
   font-size: 1.125rem;
   line-height: 100%;
   font-weight: 300;
   /* padding: 0.5vw; */
 }
-.block8 .item1 .text3 {
+.contacts .item1 .text3 {
   font-size: 1rem;
   line-height: 100%;
   font-weight: 300;
@@ -563,20 +571,19 @@ ul {
   margin-top: 1.5vw;
   width: 80%;
 }
-.block8 .item1 .stars {
+.contacts .item1 .stars {
   display: flex;
   justify-content: center;
   gap: 1vw;
   margin-top: 2vw;
 }
-.block8 .item1 .stars .star {
+.contacts .item1 .stars .star {
   width: 1.5vw;
   height: 1.5vw;
   background-image: url(https://img.icons8.com/fluency/48/star--v1.png);
   background-size: cover;
 }
-/* <img width="48" height="48" src="https://img.icons8.com/fluency/48/star--v1.png" alt="star--v1"/> */
-.block8 .item2 {
+.contacts .item2 {
   width: 55vw;
   height: 30vw;
   background: linear-gradient(
@@ -589,38 +596,29 @@ ul {
   color: #fff;
   padding: 5vw 10vw;
 }
-.block8 .item2 h2 {
+.contacts .item2 h2 {
   /* font-size: 2.25vw; */
   font-weight: normal;
   text-align: center;
   text-transform: uppercase;
 }
-.block8 .item2 .inputs {
+.contacts .item2 .inputs {
   background-color: transparent;
   font-size: 1.125rem;
   display: flex;
   flex-wrap: wrap;
   justify-content: space-between;
 }
-.block8 .item2 .inputs div.name {
+.contacts .item2 .inputs div.name {
   width: 100%;
 }
-.block8 .item2 .inputs input.name {
+.contacts .item2 .inputs input.name {
   width: 100%;
 }
-.block8 .item2 .inputs .textarea {
+.contacts .item2 .inputs .textarea {
   width: 100%;
 }
-/* .block8 .item2 .inputs .email {
-  width: 50%;
-}
-.block8 .item2 .inputs .tel {
-  width: 50%;
-} */
-/* .block8 .item2 .inputs .textarea {
-  width: 100%;
-} */
-.block8 input {
+.contacts input {
   background-color: transparent;
   border: none;
   outline: none;
@@ -628,7 +626,7 @@ ul {
   font-size: 1.125rem;
   color: #fff8;
   padding: 0.5vw;
-  border-bottom: .0625vw solid #fff;
+  border-bottom: 0.0625vw solid #fff;
 }
 textarea {
   background-color: transparent;
@@ -636,17 +634,18 @@ textarea {
   outline: none;
   font-size: 1.125rem;
   color: #fff8;
-  border: .0625vw solid #fff;
+  border: 0.0625vw solid #fff;
   border-radius: 1vw;
   width: 100%;
   height: 10vw;
   padding: 1vw;
   margin: 1vw 0;
 }
-input::placeholder, textarea::placeholder{
+input::placeholder,
+textarea::placeholder {
   color: #fff8;
 }
-.textarea{
+.textarea {
   position: relative;
 }
 .textarea::after {
@@ -657,7 +656,7 @@ input::placeholder, textarea::placeholder{
   background-image: url(https://img.icons8.com/ios/50/ffffff/attach.png);
   /* opacity: 50%; */
   background-size: cover;
-  border: .0625vw solid #fff;
+  border: 0.0625vw solid #fff;
   border-radius: 20%;
   position: absolute;
   bottom: 2vw;
@@ -671,17 +670,15 @@ input::placeholder, textarea::placeholder{
   background-image: url(https://img.icons8.com/ios/50/ffffff/telegram-app.png);
   /* opacity: 50%; */
   background-size: cover;
-  border: .0625vw solid #fff;
+  border: 0.0625vw solid #fff;
   border-radius: 20%;
   position: absolute;
   bottom: 2vw;
   right: 3.5vw;
 }
-/* <img width="50" height="50" src="https://img.icons8.com/ios/50/attach.png" alt="attach"/>
-<img width="50" height="50" src="https://img.icons8.com/ios/50/telegram-app.png" alt="telegram-app"/> */
-footer .row1{
+footer .row1 {
   width: 90vw;
-  border-bottom: .1875vw solid #BDBDBD;
+  border-bottom: 0.1875vw solid #bdbdbd;
   margin: auto;
   margin-top: 10vw;
   height: 25vw;
@@ -690,73 +687,54 @@ footer .row1{
   justify-content: space-between;
   align-items: center;
 }
-footer .row2{
+footer .row2 {
   width: 85vw;
   margin: 3vw auto 5vw auto;
   text-align: right;
-  color: #BDBDBD;
+  color: #bdbdbd;
 }
-/* footer .row1 .col1{
-  width: 30%;
-  height: 100%;
-  border: .0625vw solid #ff0000;
-}
-footer .row1 .col2{
-  width: 30%;
-  height: 100%;
-  border: .0625vw solid #ff0000;
-}
-footer .row1 .col3{
-  width: 40%;
-  height: 100%;
-  border: .0625vw solid #ff0000;
-} */
-footer .row1 .col1, .col2, .col3{
+footer .row1 .col1,
+footer .row1 .col2,
+footer .row1 .col3 {
   display: flex;
   flex-wrap: wrap;
   align-items: center;
   align-content: center;
   justify-content: center;
 }
-footer .row1 .col1 .icon{
+footer .row1 .col1 .icon {
   background-image: url(https://ucarecdn.com/b4157a46-7c83-475d-afd0-e2d490c29bbd/);
   width: 5vw;
   height: 5vw;
   background-size: cover;
   padding: 1vw;
 }
-footer .row1 .col1 .icon-text{
+footer .row1 .col1 .icon-text {
   font-size: 1.25rem;
   font-weight: 700;
   padding: 1vw;
 }
-footer .row1 .col1 .text{
+footer .row1 .col1 .text {
   font-size: 1.125rem;
   text-transform: uppercase;
   font-weight: 300;
   padding: 0 1vw 1vw 5vw;
-  
 }
-footer .row1 .col3 div{
+footer .row1 .col3 div {
   padding: 1vw 1vw;
   width: 45%;
   font-size: 1.125rem;
   font-weight: 300;
 }
-/* footer .row1 .col2{
-  display: flex;
-  flex-wrap: wrap;
-  align-items: center;
-  align-content: center;
-  justify-content: center;
-} */
-footer .row1 .col2 .tel .icon{
+footer .row1 .col2 .tel .icon {
   background-image: url(https://img.icons8.com/ios-filled/50/phone.png);
   width: 2vw;
   height: 2vw;
   background-size: cover;
 }
-footer .row1 .col2 .tel, .mail1, .mail2 {
+footer .row1 .col2 .tel,
+.mail1,
+.mail2 {
   display: flex;
   align-items: center;
   align-content: center;
@@ -768,44 +746,126 @@ footer .row1 .col2 .tel, .mail1, .mail2 {
   padding: 0.5vw;
   gap: 0.5vw;
 }
-footer .row1 .col2 .mail1 .icon1{
+footer .row1 .col2 .mail1 .icon1 {
   background-image: url(https://img.icons8.com/ios/50/mail.png);
   width: 2vw;
   height: 2vw;
   background-size: cover;
 }
-footer .row1 .col2 .mail2 .icon2{
+footer .row1 .col2 .mail2 .icon2 {
   background-image: url(https://img.icons8.com/ios-filled/50/whatsapp--v1.png);
   width: 2vw;
   height: 2vw;
   background-size: cover;
 }
-footer .row1 .col2 .mail2 .icon3{
+footer .row1 .col2 .mail2 .icon3 {
   background-image: url(https://img.icons8.com/ios-filled/50/telegram-app.png);
   width: 2vw;
   height: 2vw;
   background-size: cover;
 }
-footer .row1 .col2 .text2{
-  font-size: .8125rem;
+footer .row1 .col2 .text2 {
+  font-size: 0.8125rem;
   text-transform: uppercase;
 }
-/* <img width="50" height="50" src="https://img.icons8.com/ios-filled/50/phone.png" alt="phone"/>
-<img width="50" height="50" src="https://img.icons8.com/ios/50/mail.png" alt="mail"/>
-<img width="50" height="50" src="https://img.icons8.com/ios-filled/50/whatsapp--v1.png" alt="whatsapp--v1"/>
-<img width="50" height="50" src="https://img.icons8.com/ios-filled/50/telegram-app.png" alt="telegram-app"/> */
-/* <img width="50" height="50" src="https://img.icons8.com/ios/50/long-arrow-up--v1.png" alt="long-arrow-up--v1"/> */
-footer{
+footer {
   position: relative;
 }
-
 .arrow-up {
-/* background-image: url(https://img.icons8.com/ios/50/long-arrow-up--v1.png);
-background-size: cover; */
-width: 2.625vw;
-height: 3.75vw;
-position: absolute;
-bottom: 20vw;
-right: 5vw; 
-/* display: none; */
+  width: 2.625vw;
+  height: 3.75vw;
+  position: absolute;
+  bottom: 20vw;
+  right: 5vw;
+  /* display: none; */
+}
+.process .process__slider {
+  display: flex;
+  width: 600vw;
+  transition: 0.6s;
+  /* margin-left: -100%; */
+}
+.slide1,
+.slide2,
+.slide3,
+.slide4,
+.slide5,
+.slide6 {
+  width: 90vw;
+  display: flex;
+  transition: 0.6s;
+  opacity: 0%;
+}
+label {
+  position: relative;
+  z-index: 5;
+}
+input[type="radio"] {
+  display: none;
+}
+#rec1:checked ~ .process__slider {
+  margin-left: 0;
+}
+#rec1:checked ~ .item1 > label[for="rec1"]{
+  color: #29a28c;
+  border: .0625vw solid #29a28c;
+}
+#rec1:checked ~ .process__slider .slide1
+{
+  opacity: 100%;
+}
+#rec2:checked ~ .process__slider {
+  margin-left: -100%;
+}
+#rec2:checked ~ .item1 > label[for="rec2"]{
+  color: #29a28c;
+  border: .0625vw solid #29a28c;
+}
+#rec2:checked ~ .process__slider .slide2
+{
+  opacity: 100%;
+}
+#rec3:checked ~ .process__slider {
+  margin-left: -200%;
+}
+#rec3:checked ~ .process__slider .slide3
+{
+  opacity: 100%;
+}
+#rec3:checked ~ .item1 > label[for="rec3"]{
+  color: #29a28c;
+  border: .0625vw solid #29a28c;
+}
+#rec4:checked ~ .process__slider {
+  margin-left: -300%;
+}
+#rec4:checked ~ .item1 > label[for="rec4"]{
+  color: #29a28c;
+  border: .0625vw solid #29a28c;
+}
+#rec4:checked ~ .process__slider .slide4
+{
+  opacity: 100%;
+}
+#rec5:checked ~ .process__slider {
+  margin-left: -400%;
+}
+#rec5:checked ~ .item1 > label[for="rec5"]{
+  color: #29a28c;
+  border: .0625vw solid #29a28c;
+}
+#rec5:checked ~ .process__slider .slide5
+{
+  opacity: 100%;
+}
+#rec6:checked ~ .process__slider {
+  margin-left: -500%;
+}
+#rec6:checked ~ .item1 > label[for="rec6"]{
+  color: #29a28c;
+  border: .0625vw solid #29a28c;
+}
+#rec6:checked ~ .process__slider .slide6
+{
+  opacity: 100%;
 }
