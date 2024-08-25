@@ -6,6 +6,9 @@
   /* width: 100vw; */
   scroll-behavior: smooth;
 }
+label{
+  cursor: pointer;
+}
 a {
   text-decoration: none;
   color: inherit;
@@ -108,10 +111,10 @@ li:hover ul.hidden_menu li:hover {
   justify-content: center;
   align-items: center;
   align-content: center;
-  background-size: cover;
   background: 
     linear-gradient(#0d0c21a6, #0d0c21a6), 
     url(https://ucarecdn.com/761233c4-7224-418d-b151-ea7bc1196250/);
+  background-size: cover;
 }
 .banner .figure .text h1 {
   font-family: "Open Sans", sans-serif;
