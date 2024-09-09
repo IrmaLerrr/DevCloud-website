@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap');
+
 :root {
   --font-family: Open Sans, sans-serif;
   --color: #29a28c;
@@ -96,14 +98,14 @@ li:hover ul.hidden_menu li:hover {
   width: 3.125vw;
   height: 3.125vw;
   border-radius: 50%;
-  background-color: #fff;
-  background-image: url(https://ucarecdn.com/b4157a46-7c83-475d-afd0-e2d490c29bbd/);
+  /* background-color: #fff; */
+  background-image: url(../img/cropped-Screenshot_95-1\ 1_page.png);
   background-size: 118%;
   background-position: -0.1875vw center;
   margin: 0 0.3125vw;
 }
 .banner div.figure {
-  width: 100vw;
+  width: 100%;
   height: 50vw;
   position: relative;
   display: flex;
@@ -113,7 +115,7 @@ li:hover ul.hidden_menu li:hover {
   align-content: center;
   background: 
     linear-gradient(#0d0c21a6, #0d0c21a6), 
-    url(https://ucarecdn.com/761233c4-7224-418d-b151-ea7bc1196250/);
+    url(../img/cooper.jpg);
   background-size: cover;
 }
 .banner .figure .text h1 {
@@ -368,6 +370,7 @@ li:hover ul.hidden_menu li:hover {
 .project .project__slider {
   display: flex;
   transition: 0.6s;
+  overflow: hidden;
 }
 #project1:checked ~ .project__slider {
   margin-left: 0;
@@ -784,8 +787,11 @@ footer {
 }
 .process .process__slider {
   display: flex;
+  gap: 8.85vw;
   width: 600vw;
+  justify-content: space-between;
   transition: 0.6s;
+  overflow: hidden;
   /* margin-left: -100%; */
 }
 .slide1,
@@ -794,7 +800,7 @@ footer {
 .slide4,
 .slide5,
 .slide6 {
-  width: 90vw;
+  /* width: 100%; */
   display: flex;
   transition: 0.6s;
   opacity: 0%;
